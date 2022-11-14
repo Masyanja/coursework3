@@ -38,8 +38,8 @@ def search_word_post():
 @app.route("/user-feed/<poster_name>", methods=['GET'])
 def search_posts_by_user(poster_name):
     post = load_posts_by_poster_name(poster_name)
-
-    return render_template('user-feed.html', post=post)
+    print(post)
+    return render_template('user-feed.html', posts=post)
 
 
 app.register_blueprint(api_bp)

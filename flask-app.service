@@ -1,0 +1,11 @@
+[Unit]
+Description=Flask app service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/mkoliada/coursework3
+ExecStart=/home/mkoliada/coursework3/venv/bin/python main.py
+#Environment="APP SETTINGS=/etc/flask-app/config.py"
+
+[INSTALL]
+WantedBy=multi-user.target
